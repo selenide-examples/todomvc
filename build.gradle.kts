@@ -28,4 +28,5 @@ java {
 tasks.withType<Test>().configureEach {
   useJUnitPlatform()
   testLogging.showExceptions = true
+  systemProperties["selenide.headless"] = System.getProperty("selenide.headless")
 }
