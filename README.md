@@ -18,7 +18,7 @@ Type from command line for running tests in different browsers:
 Type from command line for running tests in different browsers:
 
 ```
-mvn test
+./mvnw test
 ```
 
 _Feel free to share your feedback!_
