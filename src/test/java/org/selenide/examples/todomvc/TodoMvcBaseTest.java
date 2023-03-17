@@ -77,6 +77,7 @@ abstract class TodoMvcBaseTest {
     addItem("Two");
     addItem("Three");
 
+    $$(".todo-list").shouldHave(size(1));
     $$(".todo-list .view").shouldHave(size(3));
     $(".todo-count").shouldHave(text("3 items left"));
 
