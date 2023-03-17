@@ -7,20 +7,43 @@ on:
     branches:
       - '*'
 jobs:
-  run-tests-job:
+  build-with-gradle:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
-      - uses: actions/setup-java@v1
+        uses: actions/checkout@v3
+      - uses: actions/setup-java@v3
         with:
           java-version: '11'
-      - name: Run tests in Gradle
-        run: ./gradlew clean test -Dselenide.headless=true --info --rerun-tasks
-      - name: Run tests in Maven
-        run: ./mvnw clean test -Dselenide.headless=true
-      - uses: actions/upload-artifact@v2
+          cache: 'gradle'
+          distribution: 'temurin'
+      - name: Build & test
+        uses: gradle/gradle-build-action@v2
+        with:
+          arguments: clean test -Dselenide.headless=true --info --rerun-tasks
+      - uses: actions/upload-artifact@v3
         if: failure()
         with:
-          name: test-report
-          path: build/reports/
+          name: test-report-gradle
+          path: |
+            **/build/reports
+            **/build/test-results
+
+  build-with-maven:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - uses: actions/setup-java@v3
+        with:
+          java-version: '11'
+          cache: 'maven'
+          distribution: 'temurin'
+      - name: build & test
+        run: ./mvnw clean test -Dselenide.headless=true
+      - uses: actions/upload-artifact@v3
+        if: failure()
+        with:
+          name: test-report-gradle
+          path: |
+            **/test/surefire-reports

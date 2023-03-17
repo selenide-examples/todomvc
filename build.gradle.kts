@@ -8,15 +8,17 @@ repositories {
 
 dependencies {
     components.all<NettyBomAlignmentRule>()
-    testImplementation(platform("org.junit:junit-bom:5.7.1"))
+    testImplementation(platform("org.junit:junit-bom:5.9.2"))
     testImplementation("org.junit.jupiter:junit-jupiter")
-    testImplementation("com.codeborne:selenide:5.18.0")
-    testRuntimeOnly("org.slf4j:slf4j-simple:1.7.30")
+    testImplementation("com.codeborne:selenide:6.12.3")
+    testRuntimeOnly("org.slf4j:slf4j-simple:2.0.6")
     constraints {
-        implementation("com.google.guava:guava:30.1-jre") {
+        implementation("com.google.guava:guava:31.1-jre") {
             because("latest compatible version with all dependencies")
         }
     }
+    testImplementation("com.microsoft.playwright:playwright:1.31.0")
+    testImplementation("com.microsoft.playwright:driver-bundle:1.31.0")
 }
 
 java {
