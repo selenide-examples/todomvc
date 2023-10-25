@@ -31,11 +31,8 @@ abstract class TodoMvcBaseTest {
     if (hasWebDriverStarted()) {
       clearBrowserCookies();
       clearBrowserLocalStorage();
-      refresh();
     }
-    else {
-      open(url);
-    }
+    open(url);
   }
 
   @Test
