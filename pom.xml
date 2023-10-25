@@ -28,21 +28,21 @@
   </build>
 
   <properties>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
   </properties>
 
   <dependencies>
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-engine</artifactId>
-      <version>5.9.2</version>
+      <version>5.10.0</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>com.codeborne</groupId>
       <artifactId>selenide</artifactId>
-      <version>6.13.0</version>
+      <version>7.0.0</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -54,13 +54,13 @@
     <dependency>
       <groupId>com.microsoft.playwright</groupId>
       <artifactId>playwright</artifactId>
-      <version>1.32.0</version>
+      <version>1.39.0</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>com.microsoft.playwright</groupId>
       <artifactId>driver-bundle</artifactId>
-      <version>1.32.0</version>
+      <version>1.39.0</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
