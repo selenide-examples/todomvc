@@ -17,8 +17,8 @@ dependencies {
             because("latest compatible version with all dependencies")
         }
     }
-    testImplementation("com.microsoft.playwright:playwright:1.41.1")
-    testImplementation("com.microsoft.playwright:driver-bundle:1.41.1")
+    testImplementation("com.microsoft.playwright:playwright:1.41.2")
+    testImplementation("com.microsoft.playwright:driver-bundle:1.41.2")
 }
 
 java {
