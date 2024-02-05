@@ -8,7 +8,7 @@ repositories {
 
 dependencies {
     components.all<NettyBomAlignmentRule>()
-    testImplementation(platform("org.junit:junit-bom:5.10.1"))
+    testImplementation(platform("org.junit:junit-bom:5.10.2"))
     testImplementation("org.junit.jupiter:junit-jupiter")
     testImplementation("com.codeborne:selenide:7.0.6")
     testRuntimeOnly("org.slf4j:slf4j-simple:2.0.11")
