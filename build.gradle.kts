@@ -11,7 +11,7 @@ dependencies {
     testImplementation(platform("org.junit:junit-bom:5.10.2"))
     testImplementation("org.junit.jupiter:junit-jupiter")
     testImplementation("com.codeborne:selenide:7.2.3")
-    testRuntimeOnly("org.slf4j:slf4j-simple:2.0.12")
+    testRuntimeOnly("org.slf4j:slf4j-simple:2.0.13")
     constraints {
         implementation("com.google.guava:guava:33.1.0-jre") {
             because("latest compatible version with all dependencies")
