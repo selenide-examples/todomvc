@@ -18,7 +18,7 @@ dependencies {
         }
     }
     testImplementation("com.microsoft.playwright:playwright:1.45.1")
-    testImplementation("com.microsoft.playwright:driver-bundle:1.45.1")
+    testImplementation("com.microsoft.playwright:driver-bundle:1.46.0")
 }
 
 java {
