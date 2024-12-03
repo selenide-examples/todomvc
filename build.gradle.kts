@@ -10,7 +10,7 @@ dependencies {
     components.all<NettyBomAlignmentRule>()
     testImplementation(platform("org.junit:junit-bom:5.11.3"))
     testImplementation("org.junit.jupiter:junit-jupiter")
-    testImplementation("com.codeborne:selenide:7.6.0")
+    testImplementation("com.codeborne:selenide:7.6.1")
     testRuntimeOnly("org.slf4j:slf4j-simple:2.0.16")
     constraints {
         implementation("com.google.guava:guava:33.3.1-jre") {
