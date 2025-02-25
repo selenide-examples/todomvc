@@ -2,10 +2,9 @@ name: Run tests
 on:
   push:
     branches:
-      - '*'
+      - main
   pull_request:
-    branches:
-      - '*'
+
 jobs:
   build-with-gradle:
     runs-on: ubuntu-latest
@@ -17,10 +16,9 @@ jobs:
           java-version: '17'
           cache: 'gradle'
           distribution: 'temurin'
+      - uses: gradle/actions/setup-gradle@v4
       - name: Build & test
-        uses: gradle/gradle-build-action@v3
-        with:
-          arguments: clean test -Dselenide.headless=true --info --rerun-tasks
+        run: ./gradlew clean test -Dselenide.headless=true --info --rerun-tasks
       - uses: actions/upload-artifact@v4
         if: failure()
         with:
