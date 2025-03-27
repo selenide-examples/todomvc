@@ -111,8 +111,8 @@ abstract class TodoMvcBaseTest {
     $(".todo-count").shouldHave(text("3 items left"));
 
     $(".todo-list li", 2)
-        .hover()
-        .find(".destroy").click();
+      .hover()
+      .find(".destroy").click();
 
     $$(".todo-list .view").shouldHave(size(2));
     $(".todo-count").shouldHave(text("2 items left"));
@@ -123,6 +123,8 @@ abstract class TodoMvcBaseTest {
     for (int i = 0; i < 100; i++) {
       addItem("sausage #" + i);
     }
+
+    $(".todo-count").scrollIntoCenter();
     $(".todo-count").shouldHave(text("100 items left"));
   }
 
@@ -133,9 +135,9 @@ abstract class TodoMvcBaseTest {
     for (int i = 20; i > 0; i--) {
       $(".todo-count").should(matchText(i + " items? left"));
       $(".todo-list li", i - 1)
-          .scrollTo()
-          .hover()
-          .find(".destroy").click();
+        .scrollTo()
+        .hover()
+        .find(".destroy").click();
     }
 
     $(".todo-count").should(disappear);
@@ -148,8 +150,8 @@ abstract class TodoMvcBaseTest {
     for (int i = 0; i < 20; i++) {
       $(".todo-count").should(matchText((20 - i) + " items? left"));
       $(".todo-list li")
-          .hover()
-          .find(".destroy").click();
+        .hover()
+        .find(".destroy").click();
     }
 
     $(".todo-count").should(disappear);
