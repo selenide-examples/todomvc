@@ -13,7 +13,7 @@ dependencies {
     testImplementation("org.junit.platform:junit-platform-engine")
     testImplementation("org.junit.platform:junit-platform-launcher")
 
-    testImplementation("com.codeborne:selenide:7.8.0")
+    testImplementation("com.codeborne:selenide:7.8.1")
     testRuntimeOnly("org.slf4j:slf4j-simple:2.0.17")
     constraints {
         implementation("com.google.guava:guava:33.4.6-jre") {
