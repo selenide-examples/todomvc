@@ -8,7 +8,7 @@ repositories {
 
 dependencies {
     components.all<NettyBomAlignmentRule>()
-    testImplementation(platform("org.junit:junit-bom:5.13.0"))
+    testImplementation(platform("org.junit:junit-bom:5.13.1"))
     testImplementation("org.junit.jupiter:junit-jupiter")
     testImplementation("org.junit.platform:junit-platform-engine")
     testImplementation("org.junit.platform:junit-platform-launcher")
