@@ -19,7 +19,7 @@ jobs:
       - uses: gradle/actions/setup-gradle@v5
       - name: Build & test
         run: ./gradlew clean test -Dselenide.headless=true --info --rerun-tasks
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         if: failure()
         with:
           name: test-report-gradle
@@ -39,7 +39,7 @@ jobs:
           distribution: 'temurin'
       - name: build & test
         run: ./mvnw clean test -Dselenide.headless=true
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         if: failure()
         with:
           name: test-report-gradle
