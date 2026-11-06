@@ -16,7 +16,7 @@ dependencies {
     testImplementation("com.codeborne:selenide:7.19.1")
     testRuntimeOnly("org.slf4j:slf4j-simple:2.0.20")
     constraints {
-        implementation("com.google.guava:guava:33.7.2-jre") {
+        implementation("com.google.guava:guava:33.8.0-jre") {
             because("latest compatible version with all dependencies")
         }
     }
