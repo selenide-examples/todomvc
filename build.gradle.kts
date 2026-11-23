@@ -20,7 +20,7 @@ dependencies {
             because("latest compatible version with all dependencies")
         }
     }
-    testImplementation("com.microsoft.playwright:playwright:1.65.0")
+    testImplementation("com.microsoft.playwright:playwright:1.65.1")
     testImplementation("com.microsoft.playwright:driver-bundle:1.65.1")
 }
 
